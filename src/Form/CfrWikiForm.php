@@ -24,16 +24,16 @@ class CfrWikiForm extends FormBase {
 
     $form['cfr_description'] = [
       '#type' => 'item',
-      '#markup' => '<p>This page displays search results for the value input in the
-                    search field below.</p>
+      '#markup' => '<p>This page displays search results for the value input in
+                    the search field below.</p>
                     <p><hr></p>
                     <p>Developed by Eduardo Ruiz</p>',
     ];
-
     $form['cfr_search'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search'),
-      '#description' => $this->t('Input url parameter or keyword (term) to search for.'),
+      '#description' => $this->t('Input url parameter or keyword (term) to
+                        search for.'),
       '#maxlength' => 255,
       '#size' => 64,
       '#weight' => '0',
@@ -62,7 +62,7 @@ class CfrWikiForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Display result.
     foreach ($form_state->getValues() as $key => $value) {
-      \Drupal::messenger()->addMessage($key . ': ' . ($key === 'text_format'?$value['value']:$value));
+      \Drupal::messenger()->addMessage($key . ': ' . ($key === 'text_format' ? $value['value'] : $value));
     }
   }
 
