@@ -1,0 +1,5 @@
+name: 'cfr_test'
+type: module
+description: 'CFR test module developed by Eduardo Ruiz'
+core: 8.x
+package: 'Test'

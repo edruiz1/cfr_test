@@ -1,0 +1,7 @@
+cfr_test.cfr_wiki_form:
+  path: '/wiki'
+  defaults:
+    _form: '\Drupal\cfr_test\Form\CfrWikiForm'
+    _title: 'CfrWikiForm'
+  requirements:
+    _access: 'TRUE'

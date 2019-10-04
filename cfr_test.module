@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains cfr_test.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cfr_test_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cfr_test module.
+    case 'help.page.cfr_test':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('CFR test module developed by Eduardo Ruiz') . '</p>';
+      return $output;
+
+    default:
+  }
+}
